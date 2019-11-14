@@ -89,9 +89,11 @@
 		<acme:menu-option code="master.menu.offer" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.offer.list" action="/authenticated/offer/list-active"/>
     </acme:menu-option>
-
-		<acme:menu-option code="master.menu.request" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.request.list" action="/authenticated/request/list-active"/>
+    
+        <acme:menu-option code="master.menu.request" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.request.list" action="/provider/request/list-active" access="hasRole('Provider')"/>
+			<acme:menu-suboption code="master.menu.request.list" action="/authenticated/request/list-active" access="!hasRole('Provider')"/>
+			<acme:menu-suboption code="master.menu.request.create" action="/provider/request/create" access="hasRole('Provider')"/>
     </acme:menu-option>
 
 		<acme:menu-option code="master.menu.company-record" access="isAuthenticated()">
