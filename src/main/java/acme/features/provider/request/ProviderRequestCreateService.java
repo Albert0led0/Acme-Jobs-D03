@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.entities.requests.Request;
 import acme.entities.roles.Provider;
 import acme.framework.components.Errors;
+import acme.framework.components.HttpMethod;
 import acme.framework.components.Model;
 import acme.framework.services.AbstractCreateService;
 
@@ -44,6 +45,12 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		request.unbind(entity, model, "title", "deadline", "description", "reward", "ticker");
 
+		if (request.isMethod(HttpMethod.GET)) {
+			model.setAttribute("accept", "false");
+		} else {
+			request.transfer(model, "accept");
+		}
+
 	}
 
 	@Override
@@ -60,6 +67,11 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		boolean isAccepted;
+
+		isAccepted = request.getModel().getBoolean("accept");
+		errors.state(request, isAccepted, "accept", "provider.request.error.must-accept");
 
 	}
 
