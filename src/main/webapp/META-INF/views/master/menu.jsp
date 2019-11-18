@@ -105,6 +105,10 @@
 		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list-active"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.banner" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.commercial-banner.list" action="/administrator/commercial-banner/list"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
