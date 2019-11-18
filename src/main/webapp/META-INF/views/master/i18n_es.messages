@@ -124,6 +124,7 @@ master.menu.announcement.authenticated = Anuncios mensuales
 master.menu.announcement.anonymous = Anuncios mensuales
 master.menu.announcement.administrator = Todos los anuncios
 master.menu.announcement.list = Lista de anuncios
+master.menu.announcement.create = Crear un anuncio
 
 # master.license ##############################################################
 

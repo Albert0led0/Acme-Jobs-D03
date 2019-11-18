@@ -73,6 +73,7 @@
 		
 		<acme:menu-option code="master.menu.announcement.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.announcement.list" action="/administrator/announcement/list"/>
+			<acme:menu-suboption code="master.menu.announcement.create" action="/administrator/announcement/create"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
