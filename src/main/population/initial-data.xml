@@ -77,13 +77,13 @@
 	
 	<bean id="ConfigurationEn" class = "acme.entities.configurations.Configuration">
 			<property name ="spamwords" value = "sex, hard core, viagra, cialis, nigeria, you've won, million dollar"/>
-			<property name="spamThreshold" value = "1"/>
+			<property name="spamThreshold" value = "0.01"/>
 			<property name="language" value="en"/>
 	</bean>
 	
 	<bean id="ConfigurationEs" class = "acme.entities.configurations.Configuration">
 			<property name ="spamwords" value = "sexo, duro, viagra, cialis, nigeria, has ganado, millón de dolares"/>
-			<property name="spamThreshold" value = "1"/>
+			<property name="spamThreshold" value = "0.01"/>
 			<property name="language" value="es"/>
 	</bean>
 	
