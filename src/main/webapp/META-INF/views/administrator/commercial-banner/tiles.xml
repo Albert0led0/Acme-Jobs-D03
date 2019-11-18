@@ -6,12 +6,12 @@
 
 <tiles-definitions>
 
-	<definition name="administrator/announcement/list" extends="master">		
-		<put-attribute name="body" type="template" value="../administrator/announcement/list.jsp" />
+	<definition name="administrator/commercial-banner/list" extends="master">		
+		<put-attribute name="body" type="template" value="../administrator/commercial-banner/list.jsp" />
 	</definition>
 	
-	<definition name="administrator/announcement/form" extends="master">
-		<put-attribute name="body" type="template" value="../administrator/announcement/form.jsp" />
+	<definition name="administrator/commercial-banner/form" extends="master">
+		<put-attribute name="body" type="template" value="../administrator/commercial-banner/form.jsp" />
 	</definition>
 
 </tiles-definitions>
