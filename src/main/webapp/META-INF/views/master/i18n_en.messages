@@ -74,6 +74,8 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.company-record = Company Records
 master.menu.company-record.list = Records list
 master.menu.company-record.list-top = Top company records
+master.menu.company-record.list-admin = Records list (Administrator)
+master.menu.company-record.create = Create a new Company Record
 
 # master.menu.investor-record #################################################
 
