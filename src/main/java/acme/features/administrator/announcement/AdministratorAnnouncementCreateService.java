@@ -64,10 +64,6 @@ public class AdministratorAnnouncementCreateService implements AbstractCreateSer
 		assert entity != null;
 		assert errors != null;
 
-		//		boolean isAccepted;
-		//
-		//		isAccepted = request.getModel().getBoolean("accept");
-		//		errors.state(request, isAccepted, "accept", "administrator.announcement.error.must-accept");
 	}
 
 	@Override
