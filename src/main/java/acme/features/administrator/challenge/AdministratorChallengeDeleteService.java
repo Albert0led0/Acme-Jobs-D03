@@ -44,7 +44,7 @@ public class AdministratorChallengeDeleteService implements AbstractDeleteServic
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "title", "deadline", "goldReward", "silverReward", "bronzeReward");
+		request.unbind(entity, model, "title", "deadline", "description", "goldReward", "silverReward", "bronzeReward");
 	}
 
 	@Override
