@@ -85,6 +85,8 @@ master.menu.investor-record.list-top = Mejores registros de inversores
 
 master.menu.challenge = Retos
 master.menu.challenge.list = Listado de retos
+master.menu.challenge.list.active = Retos activos
+master.menu.challenge.create = Nuevo reto
 
 ﻿# master.footer ###############################################################
 
