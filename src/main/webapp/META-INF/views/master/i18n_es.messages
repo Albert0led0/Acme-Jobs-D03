@@ -74,7 +74,6 @@ master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.company-record = Registros de empresas
 master.menu.company-record.list = Listado de registros
 master.menu.company-record.list-top = Mejores registros de empresas
-master.menu.company-record.list-admin = Listado de registros (Administrador)
 master.menu.company-record.create = Crear un nuevo registro de empresa
 
 # master.menu.investor-record #################################################
