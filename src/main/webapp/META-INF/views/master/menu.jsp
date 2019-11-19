@@ -95,7 +95,7 @@
     </acme:menu-option>
 
 		<acme:menu-option code="master.menu.company-record" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
+			<acme:menu-suboption access="!hasRole('Administrator')" code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
 			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.company-record.list-admin" action="/administrator/company-record/list"/>
 			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.company-record.create" action="/administrator/company-record/create"/>
 		</acme:menu-option>
