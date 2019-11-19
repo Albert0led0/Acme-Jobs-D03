@@ -135,6 +135,7 @@ master.menu.banner = Pancartas
 master.menu.commercial-banner.list = Lista de pancartas comerciales
 master.menu.non-commercial-banner.list = Lista de pancartas no comerciales
 master.menu.commercial-banner.create = Crear pancarta comercial
+master.menu.non-commercial-banner.create = Crear una pancarta no comercial
 
 # master.license ##############################################################
 

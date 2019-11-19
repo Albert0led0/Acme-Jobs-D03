@@ -17,3 +17,7 @@ administrator.non-commercial-banner.form.label.target-url = URL de destino:
 administrator.non-commercial-banner.form.label.jingle = Canción publicitaria:
 
 administrator.non-commercial-banner.form.button.return = Volver
+
+administrator.non-commercial-banner.form.button.delete = Borrar
+administrator.non-commercial-banner.form.button.update = Actualizar
+administrator.non-commercial-banner.form.button.create = Crear
