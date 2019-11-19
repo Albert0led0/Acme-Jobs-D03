@@ -80,6 +80,8 @@ master.menu.company-record.list-top = Mejores registros de empresas
 master.menu.investor-record = Registros de inversores
 master.menu.investor-record.list = Listado de registros
 master.menu.investor-record.list-top = Mejores registros de inversores
+master.menu.investor-record.list-admin = Listado de registros
+master.menu.investor-record.create = Crear un registro de inversor
 
 # master.menu.challenge #######################################################
 
