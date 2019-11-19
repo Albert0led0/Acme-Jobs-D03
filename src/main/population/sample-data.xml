@@ -383,6 +383,20 @@
 		<property name="creditCard" value="4928129094115167" />
 	</bean>
 	
+	<bean id="NonCommercialBanner01" class="acme.entities.banners.NonCommercialBanner">
+		<property name="pictureURL" value="https://www.clipartwiki.com/clipimg/detail/155-1551208_text-banner-png-transparent-picture-background-banner-orange.png" />
+		<property name="slogan" value="This is a commercial banner example" />
+		<property name="targetURL" value="http://www.facebook.com/" />
+		<property name="jingle" value="Queen - Don't Stop Me Now" />
+	</bean>
+	
+	<bean id="NonCommercialBanner02" class="acme.entities.banners.NonCommercialBanner">
+		<property name="pictureURL" value="https://www.antevenio.com/usa/wp-content/uploads/2018/05/20-ejemplos-de-banners-creativos.jpg" />
+		<property name="slogan" value="This is another commercial banner example" />
+		<property name="targetURL" value="https://www.github.com" />
+		<property name="jingle" value="" />
+	</bean>
+	
 	
 	<!-- Money -->
 	
