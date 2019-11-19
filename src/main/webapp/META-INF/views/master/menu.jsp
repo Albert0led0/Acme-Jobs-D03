@@ -67,9 +67,13 @@
 
 	<acme:menu-right>
 		
-	    <acme:menu-option code="master.menu.announcement">
-			<acme:menu-suboption code="master.menu.announcement.authenticated" action="/authenticated/announcement/list-monthly" access="isAuthenticated()"/>
-			<acme:menu-suboption code="master.menu.announcement.administrator" action="/administrator/announcement/list" access="hasRole('Administrator')"/>
+	  <acme:menu-option code="master.menu.announcement.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.announcement.list" action="/authenticated/announcement/list-monthly"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.announcement.administrator" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.announcement.list" action="/administrator/announcement/list"/>
+			<acme:menu-suboption code="master.menu.announcement.create" action="/administrator/announcement/create"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>
@@ -86,17 +90,23 @@
 		<acme:menu-option code="master.menu.offer" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.offer.list" action="/authenticated/offer/list-active"/>
     </acme:menu-option>
-
-		<acme:menu-option code="master.menu.request" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.request.list" action="/authenticated/request/list-active"/>
+    
+        <acme:menu-option code="master.menu.request" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.request.list" action="/provider/request/list-active" access="hasRole('Provider')"/>
+			<acme:menu-suboption code="master.menu.request.list" action="/authenticated/request/list-active" access="!hasRole('Provider')"/>
+			<acme:menu-suboption code="master.menu.request.create" action="/provider/request/create" access="hasRole('Provider')"/>
     </acme:menu-option>
 
 		<acme:menu-option code="master.menu.company-record" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
+			<acme:menu-suboption access="!hasRole('Administrator')" code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.company-record.list" action="/administrator/company-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.company-record.create" action="/administrator/company-record/create"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.investor-record" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.investor-record.list" action="/authenticated/investor-record/list"/>
+			<acme:menu-suboption access="!hasRole('Administrator')" code="master.menu.investor-record.list" action="/authenticated/investor-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.investor-record.list" action="/administrator/investor-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.investor-record.create" action="/administrator/investor-record/create"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
