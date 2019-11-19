@@ -133,6 +133,7 @@ master.menu.announcement.create = Crear un anuncio
 # master.menu.banner ####################################################
 master.menu.banner = Pancartas
 master.menu.commercial-banner.list = Lista de pancartas comerciales
+master.menu.non-commercial-banner.list = Lista de pancartas no comerciales
 master.menu.commercial-banner.create = Crear pancarta comercial
 
 # master.license ##############################################################

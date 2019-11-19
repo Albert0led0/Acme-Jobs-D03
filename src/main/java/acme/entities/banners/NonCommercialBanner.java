@@ -17,6 +17,6 @@ public class NonCommercialBanner extends Banner {
 
 	//Attributes ---------------------------------------------------------
 
-	private String jiggle;
+	private String jingle;
 
 }

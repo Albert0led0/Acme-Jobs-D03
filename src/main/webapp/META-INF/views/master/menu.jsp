@@ -115,6 +115,7 @@
 		
 		<acme:menu-option code="master.menu.banner" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.commercial-banner.list" action="/administrator/commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.non-commercial-banner.list" action="/administrator/non-commercial-banner/list"/>
 			<acme:menu-suboption code="master.menu.commercial-banner.create" action="/administrator/commercial-banner/create"/>
 		</acme:menu-option>
 
