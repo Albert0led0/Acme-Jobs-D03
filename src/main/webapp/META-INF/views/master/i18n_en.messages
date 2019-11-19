@@ -137,6 +137,7 @@ master.menu.banner = Banners
 master.menu.commercial-banner.list = Commercial Banners List
 master.menu.non-commercial-banner.list = Non Commercial Banners List
 master.menu.commercial-banner.create = Create commercial banner
+master.menu.non-commercial-banner.create = Create a non commercial banner
 
 # master.license ##############################################################
 
