@@ -67,7 +67,7 @@
 
 	<acme:menu-right>
 		
-	    <acme:menu-option code="master.menu.announcement.authenticated" access="isAuthenticated()">
+	  <acme:menu-option code="master.menu.announcement.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.announcement.list" action="/authenticated/announcement/list-monthly"/>
 		</acme:menu-option>
 		
@@ -113,6 +113,10 @@
 			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list-active"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.banner" access="hasRole('Administrator')">
+			<acme:menu-suboption code="master.menu.commercial-banner.list" action="/administrator/commercial-banner/list"/>
+			<acme:menu-suboption code="master.menu.commercial-banner.create" action="/administrator/commercial-banner/create"/>
+		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
