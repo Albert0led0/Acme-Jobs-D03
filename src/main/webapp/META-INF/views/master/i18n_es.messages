@@ -120,6 +120,7 @@ master.menu.offer.list = Lista de ofertas
 
 master.menu.request = Pedidos activos
 master.menu.request.list = Lista de pedidos
+master.menu.request.create = Crear pedido
 
 # master.menu.announcement ####################################################
 master.menu.announcement.authenticated = Anuncios mensuales

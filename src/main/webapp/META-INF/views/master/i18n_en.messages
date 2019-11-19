@@ -121,7 +121,8 @@ master.menu.offer.list = Offers List
 # master.menu.request ##############################################################
 
 master.menu.request = Active requests
-master.menu.request.list = Requests List
+master.menu.request.list = Requests list
+master.menu.request.create = Create request
 
 # master.menu.announcement ####################################################
 master.menu.announcement.authenticated = Monthly announcements
