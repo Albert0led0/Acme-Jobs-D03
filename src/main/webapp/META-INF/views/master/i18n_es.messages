@@ -120,6 +120,7 @@ master.menu.request = Pedidos activos
 master.menu.request.list = Lista de pedidos
 
 # master.menu.announcement ####################################################
+master.menu.announcement = Anuncios
 master.menu.announcement.authenticated = Anuncios mensuales
 master.menu.announcement.anonymous = Anuncios mensuales
 master.menu.announcement.administrator = Todos los anuncios

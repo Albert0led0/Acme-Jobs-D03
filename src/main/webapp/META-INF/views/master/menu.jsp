@@ -67,12 +67,9 @@
 
 	<acme:menu-right>
 		
-	    <acme:menu-option code="master.menu.announcement.authenticated" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.announcement.list" action="/authenticated/announcement/list-monthly"/>
-		</acme:menu-option>
-		
-		<acme:menu-option code="master.menu.announcement.administrator" access="hasRole('Administrator')">
-			<acme:menu-suboption code="master.menu.announcement.list" action="/administrator/announcement/list"/>
+	    <acme:menu-option code="master.menu.announcement">
+			<acme:menu-suboption code="master.menu.announcement.authenticated" action="/authenticated/announcement/list-monthly" access="isAuthenticated()"/>
+			<acme:menu-suboption code="master.menu.announcement.administrator" action="/administrator/announcement/list" access="hasRole('Administrator')"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.sign-up" action="/anonymous/user-account/create" access="isAnonymous()"/>

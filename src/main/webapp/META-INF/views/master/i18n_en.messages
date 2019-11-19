@@ -122,6 +122,7 @@ master.menu.request = Active requests
 master.menu.request.list = Requests List
 
 # master.menu.announcement ####################################################
+master.menu.announcement = Announcements
 master.menu.announcement.authenticated = Monthly announcements
 master.menu.announcement.anonymous = Monthly announcements
 master.menu.announcement.administrator = All the announcements
