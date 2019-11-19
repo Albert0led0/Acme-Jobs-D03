@@ -130,6 +130,7 @@ master.menu.announcement.authenticated = Monthly announcements
 master.menu.announcement.anonymous = Monthly announcements
 master.menu.announcement.administrator = All the announcements
 master.menu.announcement.list = Announcements List
+master.menu.announcement.create = Create an announcement
 
 
 # master.license ##############################################################
