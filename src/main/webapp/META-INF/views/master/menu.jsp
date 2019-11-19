@@ -95,7 +95,9 @@
     </acme:menu-option>
 
 		<acme:menu-option code="master.menu.company-record" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
+			<acme:menu-suboption access="!hasRole('Administrator')" code="master.menu.company-record.list" action="/authenticated/company-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.company-record.list-admin" action="/administrator/company-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.company-record.create" action="/administrator/company-record/create"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.investor-record" access="isAuthenticated()">
@@ -107,6 +109,7 @@
 		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list-active"/>
 		</acme:menu-option>
+		
 
 		<acme:menu-option code="master.menu.sign-out" action="/master/sign-out" access="isAuthenticated()"/>
 	</acme:menu-right>
