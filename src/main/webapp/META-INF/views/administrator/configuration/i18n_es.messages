@@ -19,5 +19,6 @@ administrator.configuration.form.button.return = Volver
 administrator.configuration.form.label.spamwords = Palabras no deseadas:
 administrator.configuration.form.label.spamthreshold = Límite de palabras no deseadas:
 administrator.configuration.form.label.language = Idioma:
+administrator.configuration.form.button.update = Actualizar
 
 
