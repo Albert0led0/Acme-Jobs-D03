@@ -82,7 +82,6 @@ master.menu.company-record.create = Create a new Company Record
 master.menu.investor-record = Investor Records
 master.menu.investor-record.list = Records list
 master.menu.investor-record.list-top = Top investor records
-master.menu.investor-record.list-admin = Records List
 master.menu.investor-record.create = Create an Investor Record
 
 # master.menu.challenge #######################################################

@@ -103,7 +103,7 @@
 		
 		<acme:menu-option code="master.menu.investor-record" access="isAuthenticated()">
 			<acme:menu-suboption access="!hasRole('Administrator')" code="master.menu.investor-record.list" action="/authenticated/investor-record/list"/>
-			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.investor-record.list-admin" action="/administrator/investor-record/list"/>
+			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.investor-record.list" action="/administrator/investor-record/list"/>
 			<acme:menu-suboption access="hasRole('Administrator')" code="master.menu.investor-record.create" action="/administrator/investor-record/create"/>
 		</acme:menu-option>
 		
