@@ -20,7 +20,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select count(ir) from InvestorRecord ir")
 	Integer numberOfInvestorRecords();
 
-	@Query("select min(r.reward.amount), max(r.reward.amount), avg(r.reward.amount), stddev(r.reward.amount) from Request r")
+	@Query("select min(r.reward.amount), max(r.reward.amount), avg(r.reward.amount), stddev(r.reward.amount) from Request r where r.deadline > CURRENT_TIMESTAMP")
 	Collection<Object[]> activeRequestsRewardStats();
 
 	@Query("select min(o.minReward.amount), max(o.minReward.amount), avg(o.minReward.amount), stddev(o.minReward.amount) from Offer o  where o.deadline > CURRENT_TIMESTAMP")
