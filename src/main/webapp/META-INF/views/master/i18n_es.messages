@@ -115,8 +115,11 @@ master.company.phone = +000 123 456
 master.company.email = contact@acme.com
 
 # master.menu.offer ##############################################################
-master.menu.offer = Ofertas activas
+
+master.menu.offer = Ofertas
+master.menu.offer.active-offers = Ofertas activas
 master.menu.offer.list = Lista de ofertas
+master.menu.offer.creater = Nueva oferta
 
 # master.menu.request ##############################################################
 

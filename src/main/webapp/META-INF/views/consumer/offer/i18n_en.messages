@@ -1,0 +1,18 @@
+consumer.offer.form.label.title 			= Title:
+consumer.offer.form.label.moment 			= Moment:
+consumer.offer.form.label.deadline 			= Deadline:
+consumer.offer.form.label.description 		= Description:
+consumer.offer.form.label.min-reward 		= Minimum reward:
+consumer.offer.form.label.max-reward 		= Maximum reward:
+consumer.offer.form.label.ticker1 			= Ticker:
+consumer.offer.form.label.ticker2 			= Ticker: ('O' represents the letter O, 'X' any letter, '-'a dash and '9' any number)
+
+consumer.offer.form.button.checkbox 		= Accept (Offers cannot be modified or deleted, please check your offer)
+consumer.offer.form.button.create 			= Create
+consumer.offer.form.button.return 			= Return
+
+consumer.offer.error.must-accept 			= Must accept the creation of the offer
+
+consumer.offer.list.label.deadline 			= Deadline
+consumer.offer.list.label.moment 			= Moment
+consumer.offer.list.label.title 			= Title 

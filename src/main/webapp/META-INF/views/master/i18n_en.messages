@@ -116,8 +116,11 @@ master.company.email = contact@acme.com
 
 
 # master.menu.offer ##############################################################
-master.menu.offer = Active offers
+
+master.menu.offer = Offers
+master.menu.offer.active-offers = Active offers
 master.menu.offer.list = Offers List
+master.menu.offer.create = Create offer
 
 
 # master.menu.request ##############################################################
