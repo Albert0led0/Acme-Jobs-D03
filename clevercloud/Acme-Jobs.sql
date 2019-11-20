@@ -291,7 +291,7 @@ CREATE TABLE `configuration` (
 
 LOCK TABLES `configuration` WRITE;
 /*!40000 ALTER TABLE `configuration` DISABLE KEYS */;
-INSERT INTO `configuration` VALUES (6,0,'en',1,'sex, hard core, viagra, cialis, nigeria, you\'ve won, million dollar'),(7,0,'es',1,'sexo, duro, viagra, cialis, nigeria, has ganado, millón de dolares');
+INSERT INTO `configuration` VALUES (6,0,'en',0.01,'sex, hard core, viagra, cialis, nigeria, you\'ve won, million dollar'),(7,0,'es',0.01,'sexo, duro, viagra, cialis, nigeria, has ganado, millón de dolares');
 /*!40000 ALTER TABLE `configuration` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -386,7 +386,7 @@ CREATE TABLE `non_commercial_banner` (
   `pictureurl` varchar(255) DEFAULT NULL,
   `slogan` varchar(255) DEFAULT NULL,
   `targeturl` varchar(255) DEFAULT NULL,
-  `jiggle` varchar(255) DEFAULT NULL,
+  `jingle` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -573,7 +573,7 @@ CREATE TABLE `user_account` (
 
 LOCK TABLES `user_account` WRITE;
 /*!40000 ALTER TABLE `user_account` DISABLE KEYS */;
-INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$LUTzgH1zj0AMqEoFBLc/6./12J0FQxmwzLMFuD4X080ciKqrUMD3i','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$hH6t1W9UCMKlZDRP2Fk0h.FE0.ABG.kEkWxHvcljaP26EcwfzzToK','administrator');
+INSERT INTO `user_account` VALUES (1,0,_binary '\0','john.doe@acme.com','John','Doe','$2a$05$Y.q4KAITJovM8aUYNvsVruV6J4UNcGXsZPJRRQyWeVoEwihkrBN4.','anonymous'),(3,0,_binary '','administrator@acme.com','Administrator','Acme.com','$2a$05$vCS/QYrZ5riLy2ut1ogYYey0IOa8cAWJ9/NOteGdZ.xVcnkWxwmJS','administrator');
 /*!40000 ALTER TABLE `user_account` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -586,4 +586,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-06 21:34:01
+-- Dump completed on 2019-11-20 22:07:11
