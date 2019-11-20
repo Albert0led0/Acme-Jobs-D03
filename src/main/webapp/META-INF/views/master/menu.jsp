@@ -110,7 +110,10 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.challenge" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list-active"/>
+			<acme:menu-suboption code="master.menu.challenge.list-active" action="/authenticated/challenge/list-active" access="!hasRole('Administrator')" />
+			<acme:menu-suboption code="master.menu.challenge.list-active" action="/administrator/challenge/list-active" access="hasRole('Administrator')"/>
+			<acme:menu-suboption code="master.menu.challenge.list" action="/administrator/challenge/list" access="hasRole('Administrator')"/>		
+			<acme:menu-suboption code="master.menu.challenge.create" action="/administrator/challenge/create" access="hasRole('Administrator')"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.banner" access="hasRole('Administrator')">

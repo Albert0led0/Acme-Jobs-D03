@@ -86,7 +86,9 @@ master.menu.investor-record.create = Create an Investor Record
 # master.menu.challenge #######################################################
 
 master.menu.challenge = Challenges
-master.menu.challenge.list = Challenge list
+master.menu.challenge.list = Challenges list
+master.menu.challenge.list-active = Active challenges
+master.menu.challenge.create = New challenge
 
 # master.footer ###############################################################
 
