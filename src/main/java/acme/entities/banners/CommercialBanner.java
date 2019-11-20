@@ -4,6 +4,8 @@ package acme.entities.banners;
 import javax.persistence.Entity;
 import javax.validation.constraints.NotBlank;
 
+import org.hibernate.validator.constraints.CreditCardNumber;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +21,7 @@ public class CommercialBanner extends Banner {
 	//Attributes ---------------------------------------------------------
 
 	@NotBlank
+	@CreditCardNumber
 	private String creditCard;
 
 }
