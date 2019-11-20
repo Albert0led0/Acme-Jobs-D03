@@ -16,6 +16,7 @@ consumer.offer.form.error.timestamp			= The deadline must adhere to the followin
 consumer.offer.form.error.null-currency		= The amount and currency must be specified
 consumer.offer.form.error.rewards			= The maximum reward but be greater than or equal to the minimum
 consumer.offer.form.error.must-accept 		= Must accept the creation of the offer
+consumer.offer.form.error.duplicated-ticker = This ticker is already in use
 
 consumer.offer.form.placeholder.deadline	= YYYY/MM/DD HH:mm
 

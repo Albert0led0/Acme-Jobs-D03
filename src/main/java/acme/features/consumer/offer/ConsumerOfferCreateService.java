@@ -72,6 +72,7 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		Boolean rewardAux = true;
 		Boolean deadlineAux = true;
 		Date now = new Date(System.currentTimeMillis());
+		boolean tickerAux = this.repository.checkUniqueTicker(entity.getTicker());
 
 		// Checking if the deadline is a valid date and it's in the future
 		try {
@@ -101,6 +102,10 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		if (rewardAux) {
 			errors.state(request, entity.getMaxReward().getAmount().doubleValue() >= entity.getMinReward().getAmount().doubleValue(), "maxReward", "consumer.offer.form.error.rewards");
+		}
+
+		if (tickerAux) {
+			errors.state(request, !tickerAux, "ticker", "consumer.offer.form.error.duplicated-ticker");
 		}
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "consumer.offer.form.error.must-accept");

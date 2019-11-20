@@ -71,6 +71,7 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		boolean isAccepted;
 		Boolean deadlineAux = true;
 		Date now = new Date(System.currentTimeMillis());
+		boolean tickerAux = this.repository.checkUniqueTicker(entity.getTicker());
 
 		// Checking if the deadline is a valid date and it's in the future
 		try {
@@ -89,6 +90,10 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 			entity.getReward().getAmount();
 		} catch (NullPointerException e) {
 			errors.state(request, false, "reward", "provider.request.form.error.null-currency");
+		}
+
+		if (tickerAux) {
+			errors.state(request, !tickerAux, "ticker", "provider.request.form.error.duplicated-ticker");
 		}
 
 		isAccepted = request.getModel().getBoolean("accept");

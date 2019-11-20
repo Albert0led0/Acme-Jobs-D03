@@ -13,6 +13,7 @@ provider.request.form.error.past-deadline		= The deadline must be in the future
 provider.request.form.error.timestamp			= The deadline must adhere to the following pattern: YYYY/MM/DD HH:mm
 provider.request.form.error.null-currency		= The amount and currency must be specified
 provider.request.error.must-accept 				= Must accept the creation of the request
+provider.request.form.error.duplicated-ticker   = This ticker is already in use
 
 provider.request.form.placeholder.deadline	= YYYY/MM/DD HH:mm
 provider.request.list.label.deadline = Deadline
