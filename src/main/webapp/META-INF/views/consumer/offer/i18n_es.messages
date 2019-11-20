@@ -16,6 +16,7 @@ consumer.offer.form.error.timestamp			= La fecha límite tiene que seguir el pat
 consumer.offer.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
 consumer.offer.form.error.rewards			= La recompensa máxima tiene que ser mayor o igual que la mínima
 consumer.offer.form.error.must-accept 		= Debe aceptar la creación de la oferta
+consumer.offer.form.error.duplicated-ticker = Este ticker ya está en uso
 
 consumer.offer.form.placeholder.deadline	= DD/MM/AAAA HH:mm
 

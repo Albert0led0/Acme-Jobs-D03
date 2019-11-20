@@ -19,4 +19,7 @@ public interface ProviderRequestRepository extends AbstractRepository {
 	@Query("select r from Request r where r.deadline > ?1")
 	Collection<Request> findManyAllActive(Date d);
 
+	@Query("select case when count(r) > 0 then true else false end from Request r where r.ticker = ?1")
+	boolean checkUniqueTicker(String ticker);
+
 }

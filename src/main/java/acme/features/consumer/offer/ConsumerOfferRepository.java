@@ -18,4 +18,7 @@ public interface ConsumerOfferRepository extends AbstractRepository {
 	@Query("select o from Offer o where o.deadline > CURRENT_TIMESTAMP")
 	Collection<Offer> findAllActive();
 
+	@Query("select case when count(o) > 0 then true else false end from Offer o where o.ticker = ?1")
+	boolean checkUniqueTicker(String ticker);
+
 }
