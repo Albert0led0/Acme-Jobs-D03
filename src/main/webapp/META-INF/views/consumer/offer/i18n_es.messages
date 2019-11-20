@@ -11,7 +11,13 @@ consumer.offer.form.button.checkbox 		= Acepto (Las ofertas no se pueden ni elim
 consumer.offer.form.button.create 			= Crear
 consumer.offer.form.button.return 			= Volver
 
+consumer.offer.form.error.deadline			= La fecha límite tiene que ser futura
+consumer.offer.form.error.timestamp			= La fecha límite tiene que seguir el patrón DD/MM/AAAA HH:mm
+consumer.offer.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
+consumer.offer.error.form.rewards			= La recompensa máxima tiene que ser mayor o igual que la mínima
 consumer.offer.error.must-accept 			= Debe aceptar la creación de la oferta
+
+consumer.offer.form.placeholder.deadline	= DD/MM/AAAA HH:mm
 
 consumer.offer.list.label.deadline 			= Fecha límite
 consumer.offer.list.label.moment 			= Momento

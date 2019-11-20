@@ -69,7 +69,39 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		assert errors != null;
 
 		boolean isAccepted;
+		Boolean rewardAux = true;
+		Boolean deadlineAux = true;
+		Date now = new Date(System.currentTimeMillis());
 
+		// Checking if the deadline is a valid date and it's in the future
+		try {
+			assert entity.getDeadline() != null;
+			if (deadlineAux) {
+				throw new RuntimeException();
+			}
+		} catch (AssertionError e1) {
+			deadlineAux = false;
+			errors.state(request, false, "deadline", "consumer.offer.form.error.timestamp");
+		} catch (RuntimeException e2) {
+			errors.state(request, entity.getDeadline().after(now), "deadline", "consumer.offer.form.error.past-deadline");
+		}
+		// Makes sure that maxReward >= minReward
+		try {
+			entity.getMinReward().getAmount();
+		} catch (NullPointerException e) {
+			errors.state(request, false, "minReward", "consumer.offer.form.error.null-currency");
+			rewardAux = false;
+		}
+		try {
+			entity.getMaxReward().getAmount();
+		} catch (NullPointerException e) {
+			errors.state(request, false, "maxReward", "consumer.offer.form.error.null-currency");
+			rewardAux = false;
+		}
+
+		if (rewardAux) {
+			errors.state(request, entity.getMaxReward().getAmount().doubleValue() >= entity.getMinReward().getAmount().doubleValue(), "maxReward", "consumer.offer.error.form.rewards");
+		}
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "consumer.offer.error.must-accept");
 
