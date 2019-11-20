@@ -8,6 +8,14 @@ administrator.challenge.form.label.gold-reward			= Recompensa para el objetivo O
 administrator.challenge.form.label.silver-reward		= Recompensa para el objetivo Plata:
 administrator.challenge.form.label.bronze-reward		= Recompensa para el objetivo Bronce:
 
+administrator.challenge.form.error.deadline				= La fecha límite tiene que ser futura
+administrator.challenge.form.error.timestamp			= La fecha límite tiene que seguir el patrón DD/MM/AAAA HH:mm
+administrator.challenge.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
+administrator.challenge.form.error.gold-reward			= Esta cantidad debe ser mayor o igual que la recompensa para el objetivo Plata
+administrator.challenge.form.error.silver-reward		= Esta cantidad debe ser mayor o igual que la recompensa para el objetivo Bronce
+
+administrator.challenge.form.placeholder.deadline		= DD/MM/AAAA HH:mm
+
 administrator.challenge.form.button.update				= Actualizar
 administrator.challenge.form.button.delete				= Eliminar
 administrator.challenge.form.button.create				= Crear

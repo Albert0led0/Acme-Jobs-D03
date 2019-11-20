@@ -1,6 +1,8 @@
 
 package acme.features.administrator.challenge;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -64,6 +66,36 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		Boolean deadlineAux = true;
+		Date now = new Date(System.currentTimeMillis());
+
+		try {
+			entity.getGoldReward().getCurrency();
+		} catch (NullPointerException e) {
+			errors.state(request, false, "goldReward", "administrator.challenge.form.error.null-currency");
+		}
+		try {
+			entity.getSilverReward().getCurrency();
+		} catch (NullPointerException e) {
+			errors.state(request, false, "silverReward", "administrator.challenge.form.error.null-currency");
+		}
+		try {
+			entity.getBronzeReward().getCurrency();
+		} catch (NullPointerException e) {
+			errors.state(request, false, "bronzeReward", "administrator.challenge.form.error.null-currency");
+		}
+		try {
+			assert entity.getDeadline() != null;
+			if (deadlineAux) {
+				throw new RuntimeException();
+			}
+		} catch (AssertionError e1) {
+			deadlineAux = false;
+			errors.state(request, false, "deadline", "administrator.challenge.form.error.timestamp");
+		} catch (RuntimeException e2) {
+			errors.state(request, entity.getDeadline().after(now), "deadline", "administrator.challenge.form.error.past-deadline");
+		}
 	}
 
 	@Override
