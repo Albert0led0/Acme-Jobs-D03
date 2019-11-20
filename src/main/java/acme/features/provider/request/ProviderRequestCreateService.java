@@ -69,6 +69,27 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 		assert errors != null;
 
 		boolean isAccepted;
+		Boolean deadlineAux = true;
+		Date now = new Date(System.currentTimeMillis());
+
+		// Checking if the deadline is a valid date and it's in the future
+		try {
+			assert entity.getDeadline() != null;
+			if (deadlineAux) {
+				throw new RuntimeException();
+			}
+		} catch (AssertionError e1) {
+			deadlineAux = false;
+			errors.state(request, false, "deadline", "provider.request.form.error.timestamp");
+		} catch (RuntimeException e2) {
+			errors.state(request, entity.getDeadline().after(now), "deadline", "provider.request.form.error.past-deadline");
+		}
+		// Makes sure the reward (Money) is not null
+		try {
+			entity.getReward().getAmount();
+		} catch (NullPointerException e) {
+			errors.state(request, false, "reward", "provider.request.form.error.null-currency");
+		}
 
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "provider.request.error.must-accept");

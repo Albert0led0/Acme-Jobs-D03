@@ -9,7 +9,12 @@ provider.request.form.button.checkbox = Acepto (Los pedidos no se pueden ni elim
 provider.request.form.button.create = Crear
 provider.request.form.button.return = Volver
 
-provider.request.error.must-accept = Debe aceptar la creación del pedido
+consumer.offer.form.error.deadline			= La fecha límite tiene que ser futura
+consumer.offer.form.error.timestamp			= La fecha límite tiene que seguir el patrón DD/MM/AAAA HH:mm
+consumer.offer.form.error.null-currency		= La cantidad y la divisa deben ser especificadas
+consumer.offer.form.error.must-accept 		= Debe aceptar la creación del pedido
+
+consumer.offer.form.placeholder.deadline	= DD/MM/AAAA HH:mm
 
 provider.request.list.label.deadline = Fecha límite
 provider.request.list.label.moment = Momento

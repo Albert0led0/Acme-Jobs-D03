@@ -100,10 +100,10 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 		}
 
 		if (rewardAux) {
-			errors.state(request, entity.getMaxReward().getAmount().doubleValue() >= entity.getMinReward().getAmount().doubleValue(), "maxReward", "consumer.offer.error.form.rewards");
+			errors.state(request, entity.getMaxReward().getAmount().doubleValue() >= entity.getMinReward().getAmount().doubleValue(), "maxReward", "consumer.offer.form.error.rewards");
 		}
 		isAccepted = request.getModel().getBoolean("accept");
-		errors.state(request, isAccepted, "accept", "consumer.offer.error.must-accept");
+		errors.state(request, isAccepted, "accept", "consumer.offer.form.error.must-accept");
 
 	}
 

@@ -14,8 +14,8 @@ consumer.offer.form.button.return 			= Return
 consumer.offer.form.error.past-deadline		= The deadline must be in the future
 consumer.offer.form.error.timestamp			= The deadline must adhere to the following pattern: YYYY/MM/DD HH:mm
 consumer.offer.form.error.null-currency		= The amount and currency must be specified
-consumer.offer.error.form.rewards			= The maximum reward but be greater than or equal to the minimum
-consumer.offer.error.must-accept 			= Must accept the creation of the offer
+consumer.offer.form.error.rewards			= The maximum reward but be greater than or equal to the minimum
+consumer.offer.form.error.must-accept 		= Must accept the creation of the offer
 
 consumer.offer.form.placeholder.deadline	= YYYY/MM/DD HH:mm
 
