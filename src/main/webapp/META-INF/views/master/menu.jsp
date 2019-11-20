@@ -88,7 +88,9 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.offer" access="isAuthenticated()">
-			<acme:menu-suboption code="master.menu.offer.list" action="/authenticated/offer/list-active"/>
+			<acme:menu-suboption code="master.menu.offer.active-offers" action="/authenticated/offer/list-active" access="hasRole('Consumer')"	/>
+			<acme:menu-suboption code="master.menu.offer.active-offers" action="/authenticated/offer/list-active" access="!hasRole('Consumer')"/>
+			<acme:menu-suboption code="master.menu.offer.create" action="/consumer/offer/create" access="hasRole('Consumer')"/>
     </acme:menu-option>
     
         <acme:menu-option code="master.menu.request" access="isAuthenticated()">
