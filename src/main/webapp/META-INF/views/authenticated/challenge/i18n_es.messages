@@ -5,7 +5,7 @@ authenticated.challenge.form.label.deadline = Fecha límite:
 authenticated.challenge.form.label.description = Descripción:
 authenticated.challenge.form.label.gold = Recompensa para el objetivo Oro:
 authenticated.challenge.form.label.silver = Recompensa para el objetivo Plata:
-authenticated.challenge.form.label.bronze = Recompensa para el objetivo Bronze:
+authenticated.challenge.form.label.bronze = Recompensa para el objetivo Bronce:
 
 authenticated.challenge.form.button.return = Volver
 

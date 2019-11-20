@@ -4,9 +4,11 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
+<spring:message var="fecha" code="administrator.challenge.form.placeholder.deadline"/>
+
 <acme:form>
 	<acme:form-textbox code="administrator.challenge.form.label.title" path="title"/>
-	<acme:form-textbox code="administrator.challenge.form.label.deadline" path="deadline"/>
+	<acme:form-textbox code="administrator.challenge.form.label.deadline" placeholder="${fecha}" path="deadline"/>
 	<acme:form-textarea code="administrator.challenge.form.label.description" path="description" />
 	<acme:form-money code="administrator.challenge.form.label.gold-reward" path="goldReward"/>
 	<acme:form-money code="administrator.challenge.form.label.silver-reward" path="silverReward"/>
